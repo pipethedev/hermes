@@ -1,20 +1,25 @@
-import { Server, Socket } from 'net';
+import { Server, Socket, createServer } from 'net';
+import { connectionValidation } from './validations';
 
-type Topic = string;
-type Message = string;
 
 interface Subscriber {
   socket: Socket;
-  topics: Set<Topic>;
+  topics: Set<string>;
 }
 
 class Hermes {
-  private server: Server;
+  private host: string = 'localhost';
+  private port: number;
+  public server: Server;
   private subscribers: Subscriber[] = [];
 
-  constructor() {
-    this.server = new Server();
-    this.server.on('connection', this.handleConnection.bind(this));
+  constructor({ host, port }: { host: string, port: number}) {
+    // validate connection object
+
+    connectionValidation.validate({ host, port });
+
+    this.port = port;
+    this.server = createServer(this.handleConnection.bind(this));
   }
 
   private handleConnection(socket: Socket) {
@@ -44,7 +49,7 @@ class Hermes {
     });
   }
 
-  private subscribe(subscriber: Subscriber, topic: Topic) {
+  private subscribe(subscriber: Subscriber, topic: string) {
     console.log(`Subscriber subscribed to topic: ${topic}`);
 
     subscriber.topics.add(topic);
@@ -64,7 +69,7 @@ class Hermes {
     }
   }
 
-  private publish(topic: Topic, message: Message) {
+  private publish<T>(topic: string, message: T) {
     for (const subscriber of this.subscribers) {
       if (subscriber.topics.has(topic)) {
         subscriber.socket.write(`${topic}:${message}`);
@@ -72,12 +77,21 @@ class Hermes {
     }
   }
 
-  public start(host: string, port: number) {
-    this.server.listen({ host, port, exclusive: true }, () => {
-      console.log(`Broker started on port ${host}:${port}`);
+  public start() {
+    this.server.listen({ host: this.host, port: this.port }, () => {
+      const { port, host } = this.server.address() as any;
+      console.log(`Broker started on tcp://${this.host}:${port}`);
+    });
+  }
+
+  public sendMessage<T>(topic: string, message: T) {
+    console.log(`Sending message to broker: ${topic}:${message}`);
+    const socket = new Socket();
+    socket.connect(this.port, this.host, () => {
+      socket.write(`${topic}:${message}`);
+      socket.end();
     });
   }
 }
 
-const broker = new Hermes();
-broker.start('localhost',3000);
+export default Hermes;

@@ -2,9 +2,14 @@
 # yarn lockfile v1
 
 
+"@eivifj/dot@^1.0.1":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@eivifj/dot/-/dot-1.0.3.tgz"
+  integrity sha512-UE2x9N7XD/1qqtXA+4CZPD1RQAlM0lEdXdy09CJ/wNR+mgGKqwLRH4BGGfOAWwwz06pIT3c2tC4gvXbntGAeMA==
+
 "@serialport/binding-mock@10.2.2":
   version "10.2.2"
-  resolved "https://registry.yarnpkg.com/@serialport/binding-mock/-/binding-mock-10.2.2.tgz#d322a8116a97806addda13c62f50e73d16125874"
+  resolved "https://registry.npmjs.org/@serialport/binding-mock/-/binding-mock-10.2.2.tgz"
   integrity sha512-HAFzGhk9OuFMpuor7aT5G1ChPgn5qSsklTFOTUX72Rl6p0xwcSVsRtG/xaGp6bxpN7fI9D/S8THLBWbBgS6ldw==
   dependencies:
     "@serialport/bindings-interface" "^1.2.1"
@@ -12,7 +17,7 @@
 
 "@serialport/bindings-cpp@10.8.0":
   version "10.8.0"
-  resolved "https://registry.yarnpkg.com/@serialport/bindings-cpp/-/bindings-cpp-10.8.0.tgz#79507b57022ac264e963e7fbf3647a3821569a20"
+  resolved "https://registry.npmjs.org/@serialport/bindings-cpp/-/bindings-cpp-10.8.0.tgz"
   integrity sha512-OMQNJz5kJblbmZN5UgJXLwi2XNtVLxSKmq5VyWuXQVsUIJD4l9UGHnLPqM5LD9u3HPZgDI5w7iYN7gxkQNZJUw==
   dependencies:
     "@serialport/bindings-interface" "1.2.2"
@@ -21,101 +26,113 @@
     node-addon-api "^5.0.0"
     node-gyp-build "^4.3.0"
 
-"@serialport/bindings-interface@1.2.2", "@serialport/bindings-interface@^1.2.1":
+"@serialport/bindings-interface@^1.2.1", "@serialport/bindings-interface@1.2.2":
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@serialport/bindings-interface/-/bindings-interface-1.2.2.tgz#c4ae9c1c85e26b02293f62f37435478d90baa460"
+  resolved "https://registry.npmjs.org/@serialport/bindings-interface/-/bindings-interface-1.2.2.tgz"
   integrity sha512-CJaUd5bLvtM9c5dmO9rPBHPXTa9R2UwpkJ0wdh9JCYcbrPWsKz+ErvR0hBLeo7NPeiFdjFO4sonRljiw4d2XiA==
 
 "@serialport/parser-byte-length@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-byte-length/-/parser-byte-length-10.5.0.tgz#f3d4c1c7923222df2f3d3c7c8aaaa207fe373b49"
+  resolved "https://registry.npmjs.org/@serialport/parser-byte-length/-/parser-byte-length-10.5.0.tgz"
   integrity sha512-eHhr4lHKboq1OagyaXAqkemQ1XyoqbLQC8XJbvccm95o476TmEdW5d7AElwZV28kWprPW68ZXdGF2VXCkJgS2w==
 
 "@serialport/parser-cctalk@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-cctalk/-/parser-cctalk-10.5.0.tgz#0ee88db0768a361b7cfb9a394b74e480c38e1992"
+  resolved "https://registry.npmjs.org/@serialport/parser-cctalk/-/parser-cctalk-10.5.0.tgz"
   integrity sha512-Iwsdr03xmCKAiibLSr7b3w6ZUTBNiS+PwbDQXdKU/clutXjuoex83XvsOtYVcNZmwJlVNhAUbkG+FJzWwIa4DA==
 
 "@serialport/parser-delimiter@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-delimiter/-/parser-delimiter-10.5.0.tgz#b0d93100cdfd0619d020a427d652495073f3b828"
+  resolved "https://registry.npmjs.org/@serialport/parser-delimiter/-/parser-delimiter-10.5.0.tgz"
   integrity sha512-/uR/yT3jmrcwnl2FJU/2ySvwgo5+XpksDUR4NF/nwTS5i3CcuKS+FKi/tLzy1k8F+rCx5JzpiK+koqPqOUWArA==
 
 "@serialport/parser-inter-byte-timeout@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-inter-byte-timeout/-/parser-inter-byte-timeout-10.5.0.tgz#8665ee5e6138f794ac055e83ef2d1c3653a577c0"
+  resolved "https://registry.npmjs.org/@serialport/parser-inter-byte-timeout/-/parser-inter-byte-timeout-10.5.0.tgz"
   integrity sha512-WPvVlSx98HmmUF9jjK6y9mMp3Wnv6JQA0cUxLeZBgS74TibOuYG3fuUxUWGJALgAXotOYMxfXSezJ/vSnQrkhQ==
 
 "@serialport/parser-packet-length@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-packet-length/-/parser-packet-length-10.5.0.tgz#4c4d733bdff8cc4749f2bd750e42e66f8f478def"
+  resolved "https://registry.npmjs.org/@serialport/parser-packet-length/-/parser-packet-length-10.5.0.tgz"
   integrity sha512-jkpC/8w4/gUBRa2Teyn7URv1D7T//0lGj27/4u9AojpDVXsR6dtdcTG7b7dNirXDlOrSLvvN7aS5/GNaRlEByw==
 
-"@serialport/parser-readline@10.5.0", "@serialport/parser-readline@^10.2.1":
+"@serialport/parser-readline@^10.2.1", "@serialport/parser-readline@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-readline/-/parser-readline-10.5.0.tgz#df23365ae7f45679b1735deae26f72ba42802862"
+  resolved "https://registry.npmjs.org/@serialport/parser-readline/-/parser-readline-10.5.0.tgz"
   integrity sha512-0aXJknodcl94W9zSjvU+sLdXiyEG2rqjQmvBWZCr8wJZjWEtv3RgrnYiWq4i2OTOyC8C/oPK8ZjpBjQptRsoJQ==
   dependencies:
     "@serialport/parser-delimiter" "10.5.0"
 
 "@serialport/parser-ready@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-ready/-/parser-ready-10.5.0.tgz#1d9029f57b1abd664cb468e21bfccf7b44c6e8ea"
+  resolved "https://registry.npmjs.org/@serialport/parser-ready/-/parser-ready-10.5.0.tgz"
   integrity sha512-QIf65LTvUoxqWWHBpgYOL+soldLIIyD1bwuWelukem2yDZVWwEjR288cLQ558BgYxH4U+jLAQahhqoyN1I7BaA==
 
 "@serialport/parser-regex@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-regex/-/parser-regex-10.5.0.tgz#f98eab6e3d9bc99086269e9acf39a82db36d245f"
+  resolved "https://registry.npmjs.org/@serialport/parser-regex/-/parser-regex-10.5.0.tgz"
   integrity sha512-9jnr9+PCxRoLjtGs7uxwsFqvho+rxuJlW6ZWSB7oqfzshEZWXtTJgJRgac/RuLft4hRlrmRz5XU40i3uoL4HKw==
 
 "@serialport/parser-slip-encoder@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-slip-encoder/-/parser-slip-encoder-10.5.0.tgz#cb79ac0fda1fc87f049690ff7b498c787da67991"
+  resolved "https://registry.npmjs.org/@serialport/parser-slip-encoder/-/parser-slip-encoder-10.5.0.tgz"
   integrity sha512-wP8m+uXQdkWSa//3n+VvfjLthlabwd9NiG6kegf0fYweLWio8j4pJRL7t9eTh2Lbc7zdxuO0r8ducFzO0m8CQw==
 
 "@serialport/parser-spacepacket@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/parser-spacepacket/-/parser-spacepacket-10.5.0.tgz#2fc077c0ec16a9532c511ad5f2ab12d588796bc7"
+  resolved "https://registry.npmjs.org/@serialport/parser-spacepacket/-/parser-spacepacket-10.5.0.tgz"
   integrity sha512-BEZ/HAEMwOd8xfuJSeI/823IR/jtnThovh7ils90rXD4DPL1ZmrP4abAIEktwe42RobZjIPfA4PaVfyO0Fjfhg==
 
 "@serialport/stream@10.5.0":
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@serialport/stream/-/stream-10.5.0.tgz#cda8fb3e8d03094b0962a3d14b73adfcd591be58"
+  resolved "https://registry.npmjs.org/@serialport/stream/-/stream-10.5.0.tgz"
   integrity sha512-gbcUdvq9Kyv2HsnywS7QjnEB28g+6OGB5Z8TLP7X+UPpoMIWoUsoQIq5Kt0ZTgMoWn3JGM2lqwTsSHF+1qhniA==
   dependencies:
     "@serialport/bindings-interface" "1.2.2"
     debug "^4.3.2"
 
-"@types/node@^18.15.11":
+"@types/node@*", "@types/node@^18.15.11":
   version "18.15.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz"
   integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
+
+"@types/ws@^8.5.4":
+  version "8.5.4"
+  resolved "https://registry.npmjs.org/@types/ws/-/ws-8.5.4.tgz"
+  integrity sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==
+  dependencies:
+    "@types/node" "*"
+
+component-type@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/component-type/-/component-type-1.2.1.tgz"
+  integrity sha512-Kgy+2+Uwr75vAi6ChWXgHuLvd+QLD7ssgpaRq2zCvt80ptvAfMc/hijcJxXkBa2wMlEZcJvC2H8Ubo+A9ATHIg==
 
 debug@^4.3.2, debug@^4.3.3:
   version "4.3.4"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
 
 ms@2.1.2:
   version "2.1.2"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 node-addon-api@^5.0.0:
   version "5.1.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-5.1.0.tgz#49da1ca055e109a23d537e9de43c09cca21eb762"
+  resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz"
   integrity sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==
 
 node-gyp-build@^4.3.0:
   version "4.6.0"
-  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
+  resolved "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.6.0.tgz"
   integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
 
 serialport@^10.5.0:
   version "10.5.0"
-  resolved "https://registry.yarnpkg.com/serialport/-/serialport-10.5.0.tgz#b85f614def6e8914e5865c798b0555330903a0f8"
+  resolved "https://registry.npmjs.org/serialport/-/serialport-10.5.0.tgz"
   integrity sha512-7OYLDsu5i6bbv3lU81pGy076xe0JwpK6b49G6RjNvGibstUqQkI+I3/X491yBGtf4gaqUdOgoU1/5KZ/XxL4dw==
   dependencies:
     "@serialport/binding-mock" "10.2.2"
@@ -132,3 +149,22 @@ serialport@^10.5.0:
     "@serialport/parser-spacepacket" "10.5.0"
     "@serialport/stream" "10.5.0"
     debug "^4.3.3"
+
+typecast@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/typecast/-/typecast-0.0.1.tgz"
+  integrity sha512-L2f5OCLKsJdCjSyN0d5O6CkNxhiC8EQ2XlXnHpWZVNfF+mj2OTaXhAVnP0/7SY/sxO1DHZpOFMpIuGlFUZEGNA==
+
+validate@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/validate/-/validate-5.2.0.tgz"
+  integrity sha512-pVADd6GfDT7bALYvvzhfHnfmxCDem2bG7lGY3mwHzY7ktMH/SaczoF+eKkGokQEdGKozkJvyuOiSfQEHXp4zIA==
+  dependencies:
+    "@eivifj/dot" "^1.0.1"
+    component-type "1.2.1"
+    typecast "0.0.1"
+
+ws@^8.13.0:
+  version "8.13.0"
+  resolved "https://registry.npmjs.org/ws/-/ws-8.13.0.tgz"
+  integrity sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==

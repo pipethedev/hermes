@@ -10,12 +10,16 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/server.js",
-    "start:sender": "npm run build && node dist/client/publisher.js",
-    "start:reciever": "npm run build && node dist/client/subscriber.js"
+    "start:pub": "npm run build && node dist/src/publisher.js",
+    "start:sub": "npm run build && node dist/src/subscriber.js"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "serialport": "^10.5.0"
+    "@types/ws": "^8.5.4",
+    "serialport": "^10.5.0",
+    "ws": "^8.13.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "validate": "^5.2.0"
+  }
 }
