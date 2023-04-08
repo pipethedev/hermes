@@ -9,10 +9,17 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/package/index.js 8888",
-    "start:client": "npm run build && node dist/package/client.js"
+    "start": "npm run build && node dist/server.js",
+    "start:sender": "npm run build && node dist/client/publisher.js",
+    "start:reciever": "npm run build && node dist/client/subscriber.js"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "serialport": "^10.5.0"
+  },
+  "dependencies": {
+    "fast-json-parse": "^1.0.3",
+    "ioredis": "^5.3.1",
+    "redis": "^4.6.5"
   }
 }
