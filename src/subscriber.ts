@@ -1,8 +1,7 @@
 import { Socket } from 'net';
 import { ConnectionOptions } from './types';
 
-
-class HermesSubscriber {
+export class HermesSubscriber {
   private socket: Socket;
   private options: ConnectionOptions;
 

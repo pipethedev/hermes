@@ -1,13 +1,8 @@
 import { Server, Socket, createServer } from 'net';
 import { connectionValidation } from './validations';
+import { Subscriber } from './types';
 
-
-interface Subscriber {
-  socket: Socket;
-  topics: Set<string>;
-}
-
-class Hermes {
+export class Hermes {
   private host: string = 'localhost';
   private port: number;
   public server: Server;

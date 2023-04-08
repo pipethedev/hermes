@@ -21,4 +21,4 @@ export class HermesPublisher {
 }
 
 const publisher = new HermesPublisher({ host: 'localhost', port: 3000 });
-publisher.deliver('pipes', 'Hello World!');
+publisher.deliver<string>('pipes', 'Hello World!');
