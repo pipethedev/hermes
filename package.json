@@ -20,6 +20,8 @@
     "ws": "^8.13.0"
   },
   "dependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "crypto-js": "^4.1.1",
     "validate": "^5.2.0"
   }
 }

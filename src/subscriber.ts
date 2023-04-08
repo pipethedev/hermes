@@ -34,10 +34,7 @@ export class HermesSubscriber {
   }
 }
 
-const subscriber = new HermesSubscriber({
-  host: 'localhost',
-  port: 3000
-});
+const subscriber = new HermesSubscriber({ host: 'localhost', port: 3000, hermesKey: 'abcdefg123456', hermesToken: 'f3895c544c3966873f32b85969eba496:53616c7465645f5f0000000000000000f4cdf2167d1533ae18a7078464b2f6eaf2f6d69ba21aaf8939ce24639b8c61b6ebe9b5b9063420a711927a486cc0ca5f3bad937c57390eebab542022829ef2ba6d70c5f60c31027b245d31872cb9bbc498362e3ae8058f' });
 
 subscriber.on('pipes', (message) => {
   console.log('Received news:', message);

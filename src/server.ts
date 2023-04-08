@@ -1,17 +1,23 @@
 import { Server, Socket, createServer } from 'net';
 import { connectionValidation } from './validations';
-import { Subscriber } from './types';
+import { ConnectionOptions, Subscriber } from './types';
+import CryptoJS from 'crypto-js';
 
 export class Hermes {
   private host: string = 'localhost';
   private port: number;
+  private hermesToken: string;
+  private hermesKey: string;
   public server: Server;
   private subscribers: Subscriber[] = [];
 
-  constructor({ host, port }: { host: string, port: number}) {
+  constructor({ host, port, hermesToken, hermesKey }: ConnectionOptions) {
     // validate connection object
 
     connectionValidation.validate({ host, port });
+
+    this.hermesToken = hermesToken;
+    this.hermesKey = hermesKey;
 
     this.port = port;
     this.server = createServer(this.handleConnection.bind(this));
@@ -73,10 +79,14 @@ export class Hermes {
   }
 
   public start() {
-    this.server.listen({ host: this.host, port: this.port }, () => {
-      const { port, host } = this.server.address() as any;
-      console.log(`Broker started on tcp://${this.host}:${port}`);
-    });
+    if(!this.validateKey(this.hermesKey, this.hermesToken)){
+      console.error('Invalid hermes key');
+    } else {
+      this.server.listen({ host: this.host, port: this.port }, () => {
+        const { port, host } = this.server.address() as any;
+        console.log(`Broker started on tcp://${this.host}:${port}`);
+      });
+    }
   }
 
   public sendMessage<T>(topic: string, message: T) {
@@ -86,6 +96,25 @@ export class Hermes {
       socket.write(`${topic}:${message}`);
       socket.end();
     });
+  }
+
+  private validateKey(key: string, encryptedData: any) {
+    const split = encryptedData.split(':');
+    if (split.length < 2) return '';
+
+    const reb64 = CryptoJS.enc.Hex.parse(split[1]);
+    const bytes = reb64.toString(CryptoJS.enc.Base64);
+    
+    const hash = CryptoJS.AES.decrypt(bytes, key, {
+        iv: split[0],
+        mode: CryptoJS.mode.CTR
+    });
+    const val = hash.toString(CryptoJS.enc.Utf8);
+    const data = val.split('_');
+    if(data[1] !== this.hermesKey) {
+      return false;
+    }
+    return true;
   }
 }
 
