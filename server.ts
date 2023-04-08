@@ -8,7 +8,7 @@ interface Subscriber {
   topics: Set<Topic>;
 }
 
-class Broker {
+class Hermes {
   private server: Server;
   private subscribers: Subscriber[] = [];
 
@@ -79,5 +79,5 @@ class Broker {
   }
 }
 
-const broker = new Broker();
+const broker = new Hermes();
 broker.start('localhost',3000);
