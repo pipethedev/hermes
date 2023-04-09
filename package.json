@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "./node_modules/typescript/bin/tsc",
-    "postinstall": "npm install -g nodemon",
+    "build": "tsc",
+    "postinstall": "npm install -g nodemon && npm install -g typescript",
     "start:app": "node dist/app.js",
     "start": "nodemon"
   },
