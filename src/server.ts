@@ -1,15 +1,17 @@
 import { Server, Socket, createServer } from 'net';
 import { connectionValidation } from './validations';
 import { ConnectionOptions, Subscriber } from './types';
-import CryptoJS from 'crypto-js';
+
+import { ApplicationConfig, validateKey } from './config';
 
 export class Hermes {
-  private host: string = 'localhost';
+  private host: any;
   private port: number;
   private hermesToken: string;
   private hermesKey: string;
-  public server: Server;
+  public server: any;
   private subscribers: Subscriber[] = [];
+  static instance: any;
 
   constructor({ host, port, hermesToken, hermesKey }: ConnectionOptions) {
     // validate connection object
@@ -19,9 +21,22 @@ export class Hermes {
     this.hermesToken = hermesToken;
     this.hermesKey = hermesKey;
 
+    this.host = host;
     this.port = port;
-    this.server = createServer(this.handleConnection.bind(this));
+    if(!validateKey(this.hermesKey, this.hermesToken)){
+      console.error('Invalid hermes key');
+    }else {
+      this.server = createServer(this.handleConnection.bind(this)) as Server;
+    }
   }
+
+  public static getInstance({ host, port, hermesToken, hermesKey }: ConnectionOptions): Hermes {
+    if (!Hermes.instance) {
+      Hermes.instance = new Hermes({ host, port, hermesToken, hermesKey });
+    }
+    return Hermes.instance;
+  }
+
 
   private handleConnection(socket: Socket) {
     console.log('New subscriber connected.');
@@ -78,17 +93,6 @@ export class Hermes {
     }
   }
 
-  public start() {
-    if(!this.validateKey(this.hermesKey, this.hermesToken)){
-      console.error('Invalid hermes key');
-    } else {
-      this.server.listen({ host: this.host, port: this.port }, () => {
-        const { port, host } = this.server.address() as any;
-        console.log(`Broker started on tcp://${this.host}:${port}`);
-      });
-    }
-  }
-
   public sendMessage<T>(topic: string, message: T) {
     console.log(`Sending message to broker: ${topic}:${message}`);
     const socket = new Socket();
@@ -97,25 +101,6 @@ export class Hermes {
       socket.end();
     });
   }
-
-  private validateKey(key: string, encryptedData: any) {
-    const split = encryptedData.split(':');
-    if (split.length < 2) return '';
-
-    const reb64 = CryptoJS.enc.Hex.parse(split[1]);
-    const bytes = reb64.toString(CryptoJS.enc.Base64);
-    
-    const hash = CryptoJS.AES.decrypt(bytes, key, {
-        iv: split[0],
-        mode: CryptoJS.mode.CTR
-    });
-    const val = hash.toString(CryptoJS.enc.Utf8);
-    const data = val.split('_');
-    if(data[1] !== this.hermesKey) {
-      return false;
-    }
-    return true;
-  }
 }
 
-export default Hermes;
+export default new Hermes(ApplicationConfig);

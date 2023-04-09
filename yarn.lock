@@ -26,7 +26,7 @@
     node-addon-api "^5.0.0"
     node-gyp-build "^4.3.0"
 
-"@serialport/bindings-interface@^1.2.1", "@serialport/bindings-interface@1.2.2":
+"@serialport/bindings-interface@1.2.2", "@serialport/bindings-interface@^1.2.1":
   version "1.2.2"
   resolved "https://registry.npmjs.org/@serialport/bindings-interface/-/bindings-interface-1.2.2.tgz"
   integrity sha512-CJaUd5bLvtM9c5dmO9rPBHPXTa9R2UwpkJ0wdh9JCYcbrPWsKz+ErvR0hBLeo7NPeiFdjFO4sonRljiw4d2XiA==
@@ -56,7 +56,7 @@
   resolved "https://registry.npmjs.org/@serialport/parser-packet-length/-/parser-packet-length-10.5.0.tgz"
   integrity sha512-jkpC/8w4/gUBRa2Teyn7URv1D7T//0lGj27/4u9AojpDVXsR6dtdcTG7b7dNirXDlOrSLvvN7aS5/GNaRlEByw==
 
-"@serialport/parser-readline@^10.2.1", "@serialport/parser-readline@10.5.0":
+"@serialport/parser-readline@10.5.0", "@serialport/parser-readline@^10.2.1":
   version "10.5.0"
   resolved "https://registry.npmjs.org/@serialport/parser-readline/-/parser-readline-10.5.0.tgz"
   integrity sha512-0aXJknodcl94W9zSjvU+sLdXiyEG2rqjQmvBWZCr8wJZjWEtv3RgrnYiWq4i2OTOyC8C/oPK8ZjpBjQptRsoJQ==
@@ -124,6 +124,11 @@ debug@^4.3.2, debug@^4.3.3:
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
+
+dotenv@^16.0.3:
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
+  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
 
 ms@2.1.2:
   version "2.1.2"

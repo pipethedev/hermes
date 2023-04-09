@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/server.js",
+    "start": "npm run build && node dist/app.js",
     "start:pub": "npm run build && node dist/src/publisher.js",
     "start:sub": "npm run build && node dist/src/subscriber.js"
   },
@@ -22,6 +22,7 @@
   "dependencies": {
     "@types/crypto-js": "^4.1.1",
     "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
     "validate": "^5.2.0"
   }
 }
