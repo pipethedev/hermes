@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
-    "@types/node": "^18.15.11",
     "@types/ws": "^8.5.4",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
     "serialport": "^10.5.0",
+    "typescript": "^5.0.4",
     "validate": "^5.2.0",
-    "ws": "^8.13.0"
+    "@types/node": "^18.7.6",
+    "ws": "^8.13.0",
+    "nodemon": "^2.0.22"
   }
 }
