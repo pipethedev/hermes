@@ -9,9 +9,8 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/app.js",
-    "start:pub": "npm run build && node dist/src/publisher.js",
-    "start:sub": "npm run build && node dist/src/subscriber.js"
+    "start:app": "node dist/app.js",
+    "start": "nodemon"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
