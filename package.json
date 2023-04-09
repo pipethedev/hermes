@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm install -g nodemon typescript && npm i --save-dev @types/node",
+    "postinstall": "npm i --save-dev @types/node && npm install -g nodemon typescript",
     "start:app": "node dist/app.js",
     "start": "nodemon"
   },
