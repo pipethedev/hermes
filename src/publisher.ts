@@ -9,16 +9,13 @@ export class HermesPublisher {
     private broker: Hermes;
 
     constructor(options: ConnectionOptions){
-        console.log(options);
         this.broker = new Hermes(options);
 
         this.broker.server.on('listening', () => {})
     }
 
     public deliver<T>(topic: string, message: T){
-        setInterval(() => {
-            this.broker.sendMessage<T>(topic, message);
-        }, 2000);       
+        this.broker.sendMessage<T>(topic, message);     
     }
 }
 

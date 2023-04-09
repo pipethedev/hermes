@@ -1,5 +1,8 @@
 import CryptoJS from 'crypto-js';
 import { ConnectionOptions } from "./types";
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 export const ApplicationConfig: ConnectionOptions = {
     host: process.env.HOST as string,
@@ -8,20 +11,20 @@ export const ApplicationConfig: ConnectionOptions = {
     hermesToken: process.env.HERMES_TOKEN as string
 };
 
-export const validateKey = (hermesKey: string, encryptedData: any) => {
+export const validateKey = (key: string, encryptedData: any) => {
     const split = encryptedData.split(':');
     if (split.length < 2) return '';
 
     const reb64 = CryptoJS.enc.Hex.parse(split[1]);
     const bytes = reb64.toString(CryptoJS.enc.Base64);
     
-    const hash = CryptoJS.AES.decrypt(bytes, hermesKey, {
+    const hash = CryptoJS.AES.decrypt(bytes, key, {
         iv: split[0],
         mode: CryptoJS.mode.CTR
     });
     const val = hash.toString(CryptoJS.enc.Utf8);
     const data = val.split('_');
-    if(data[1] !== hermesKey) {
+    if(data[1] !== key) {
       return false;
     }
     return true;

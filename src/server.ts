@@ -20,14 +20,14 @@ export class Hermes {
 
     this.hermesToken = hermesToken;
     this.hermesKey = hermesKey;
-
     this.host = host;
     this.port = port;
+
     if(!validateKey(this.hermesKey, this.hermesToken)){
-      console.error('Invalid hermes key');
-    }else {
-      this.server = createServer(this.handleConnection.bind(this)) as Server;
+      throw new Error('Invalid hermes key');
     }
+
+    this.server = createServer(this.handleConnection.bind(this)) as Server;
   }
 
   public static getInstance({ host, port, hermesToken, hermesKey }: ConnectionOptions): Hermes {
@@ -102,5 +102,3 @@ export class Hermes {
     });
   }
 }
-
-export default new Hermes(ApplicationConfig);
