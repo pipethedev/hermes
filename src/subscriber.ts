@@ -9,6 +9,7 @@ export class HermesSubscriber {
   constructor(options: ConnectionOptions) {
     this.options = options;
     this.socket = new Socket();
+    console.log('starting');
     this.socket.connect(this.options.port, this.options.host, () => {
       console.log('Subscriber connected to broker.');
     });
@@ -38,5 +39,5 @@ export class HermesSubscriber {
 const subscriber = new HermesSubscriber(ApplicationConfig);
 
 subscriber.on('pipes', (message) => {
-  console.log('Received news:', message);
+  console.log('Received pipes:', message);
 });

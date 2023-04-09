@@ -16,8 +16,7 @@ export class HermesPublisher {
 
     public deliver<T>(topic: string, message: T){
         setInterval(() => {
-            console.log(topic)
-            // this.broker.sendMessage<T>(topic, message);  
+            this.broker.sendMessage<T>(topic, message);  
         }, 3000);   
     }
 }

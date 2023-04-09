@@ -11,7 +11,8 @@
     "build": "tsc",
     "start:app": "node dist/app.js",
     "start": "nodemon",
-    "publisher": "node dist/src/publisher.js"
+    "publisher": "node dist/src/publisher.js",
+    "subscriber": "node dist/src/subscriber.js"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
