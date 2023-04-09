@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "build": "./node_modules/typescript/bin/tsc",
+    "postinstall": "npm install -g nodemon",
     "start:app": "node dist/app.js",
     "start": "nodemon"
   },
