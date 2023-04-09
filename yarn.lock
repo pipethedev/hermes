@@ -26,7 +26,7 @@
     node-addon-api "^5.0.0"
     node-gyp-build "^4.3.0"
 
-"@serialport/bindings-interface@^1.2.1", "@serialport/bindings-interface@1.2.2":
+"@serialport/bindings-interface@1.2.2", "@serialport/bindings-interface@^1.2.1":
   version "1.2.2"
   resolved "https://registry.npmjs.org/@serialport/bindings-interface/-/bindings-interface-1.2.2.tgz"
   integrity sha512-CJaUd5bLvtM9c5dmO9rPBHPXTa9R2UwpkJ0wdh9JCYcbrPWsKz+ErvR0hBLeo7NPeiFdjFO4sonRljiw4d2XiA==
@@ -56,7 +56,7 @@
   resolved "https://registry.npmjs.org/@serialport/parser-packet-length/-/parser-packet-length-10.5.0.tgz"
   integrity sha512-jkpC/8w4/gUBRa2Teyn7URv1D7T//0lGj27/4u9AojpDVXsR6dtdcTG7b7dNirXDlOrSLvvN7aS5/GNaRlEByw==
 
-"@serialport/parser-readline@^10.2.1", "@serialport/parser-readline@10.5.0":
+"@serialport/parser-readline@10.5.0", "@serialport/parser-readline@^10.2.1":
   version "10.5.0"
   resolved "https://registry.npmjs.org/@serialport/parser-readline/-/parser-readline-10.5.0.tgz"
   integrity sha512-0aXJknodcl94W9zSjvU+sLdXiyEG2rqjQmvBWZCr8wJZjWEtv3RgrnYiWq4i2OTOyC8C/oPK8ZjpBjQptRsoJQ==
@@ -96,7 +96,7 @@
   resolved "https://registry.npmjs.org/@types/crypto-js/-/crypto-js-4.1.1.tgz"
   integrity sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==
 
-"@types/node@*", "@types/node@^18.15.11":
+"@types/node@*", "@types/node@^18.7.6":
   version "18.15.11"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz"
   integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
@@ -255,15 +255,15 @@ minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-ms@^2.1.1:
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
-  integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
-
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
+ms@^2.1.1:
+  version "2.1.3"
+  resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
+  integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
 node-addon-api@^5.0.0:
   version "5.1.0"
