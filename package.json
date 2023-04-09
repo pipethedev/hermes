@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm install -g nodemon && npm install -g typescript",
+    "postinstall": "yarn global add nodemon typescript @types/node",
     "start:app": "node dist/app.js",
     "start": "nodemon"
   },
@@ -20,9 +20,7 @@
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
     "serialport": "^10.5.0",
-    "typescript": "^5.0.4",
     "validate": "^5.2.0",
-    "ws": "^8.13.0",
-    "nodemon": "^2.0.22"
+    "ws": "^8.13.0"
   }
 }
