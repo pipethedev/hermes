@@ -11,6 +11,9 @@
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
       "paths": {},
+      "types": [
+        "node"
+      ],
       "esModuleInterop": true,
       "skipLibCheck": true,
       "strictNullChecks": true,
