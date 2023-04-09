@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc",
     "start:app": "node dist/app.js",
-    "start": "nodemon"
+    "start": "nodemon",
+    "publisher": "node dist/src/publisher.js"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",

@@ -5,8 +5,8 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 export const ApplicationConfig: ConnectionOptions = {
-    host: process.env.HOST as string,
-    port: Number(process.env.PORT),
+    host: 'hermes-pipe.herokuapp.com', //process.env.HOST as string,
+    port: 8461, //Number(process.env.PORT),
     hermesKey: process.env.HERMES_KEY as string,
     hermesToken: process.env.HERMES_TOKEN as string
 };

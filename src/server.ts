@@ -2,7 +2,7 @@ import { Server, Socket, createServer } from 'net';
 import { connectionValidation } from './validations';
 import { ConnectionOptions, Subscriber } from './types';
 
-import { ApplicationConfig, validateKey } from './config';
+import { validateKey } from './config';
 
 export class Hermes {
   private host: any;
@@ -14,8 +14,6 @@ export class Hermes {
   static instance: any;
 
   constructor({ host, port, hermesToken, hermesKey }: ConnectionOptions) {
-    // validate connection object
-
     connectionValidation.validate({ host, port });
 
     this.hermesToken = hermesToken;
