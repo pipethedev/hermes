@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@types/crypto-js": "^4.1.1",
-    "@types/node": "^18.15.11",
     "@types/ws": "^8.5.4",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
