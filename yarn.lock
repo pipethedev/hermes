@@ -170,6 +170,11 @@ typecast@0.0.1:
   resolved "https://registry.npmjs.org/typecast/-/typecast-0.0.1.tgz"
   integrity sha512-L2f5OCLKsJdCjSyN0d5O6CkNxhiC8EQ2XlXnHpWZVNfF+mj2OTaXhAVnP0/7SY/sxO1DHZpOFMpIuGlFUZEGNA==
 
+typescript@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
+  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+
 validate@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/validate/-/validate-5.2.0.tgz"
