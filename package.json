@@ -1,6 +1,6 @@
 {
   "name": "pipe-hermes",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Simple pub sub messaging tool",
   "main": "index.js",
   "repository": {
@@ -14,7 +14,7 @@
     "build": "tsc --declaration",
     "start:app": "node dist/app.js",
     "start": "nodemon",
-    "postversion" : "git push && git push --tags"
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
@@ -28,10 +28,7 @@
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
     "mongodb": "^5.2.0",
-    "mongoose": "^7.0.3",
-    "serialport": "^10.5.0",
-    "validate": "^5.2.0",
-    "ws": "^8.13.0"
+    "validate": "^5.2.0"
   },
   "bugs": {
     "url": "https://github.com/pipethedev/hermes/issues"
