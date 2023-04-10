@@ -1,5 +1,5 @@
 {
-  "name": "@pipedev/hermes",
+  "name": "pipe-hermes",
   "version": "1.0.0",
   "description": "Simple pub sub messaging tool",
   "main": "index.js",
