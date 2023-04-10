@@ -1,5 +1,5 @@
 import { Socket } from 'net';
-import { ConnectionOptions } from './types';
+import { ConnectionOptions } from './types/hermes.types';
 import { ApplicationConfig } from './config';
 
 export class HermesSubscriber {

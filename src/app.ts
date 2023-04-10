@@ -1,5 +1,5 @@
-import { Hermes } from "./src/server";
-import { ApplicationConfig } from './src/config';
+import { Hermes } from "./server";
+import { ApplicationConfig } from './config';
 
 const hermes = new Hermes(ApplicationConfig)
 

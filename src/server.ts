@@ -1,6 +1,6 @@
 import { Server, Socket, createServer } from 'net';
 import { connectionValidation } from './validations';
-import { ConnectionOptions, Subscriber } from './types';
+import { ConnectionOptions, Subscriber } from './types/hermes.types';
 
 import { validateKey } from './config';
 

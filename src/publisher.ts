@@ -1,6 +1,6 @@
 import { ApplicationConfig } from './config';
 import { Hermes } from './server';
-import { ConnectionOptions } from './types';
+import { ConnectionOptions } from './types/hermes.types';
 import * as dotenv from 'dotenv'
 
 dotenv.config()

@@ -1,6 +1,6 @@
 import CryptoJS from 'crypto-js';
-import { ConnectionOptions } from "./types";
 import * as dotenv from 'dotenv'
+import { ConnectionOptions } from './types/hermes.types';
 
 dotenv.config()
 
