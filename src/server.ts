@@ -94,7 +94,6 @@ export class Hermes {
   public sendMessage<T>(topic: string, message: T) {
     const socket = new Socket();
     socket.connect(this.port, this.host, () => {
-      console.log('connected')
       socket.write(`${topic}:${message}`);
       socket.end();
     });
